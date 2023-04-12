@@ -1,0 +1,89 @@
+/* global selectors */
+* {
+    background-color: antiquewhite;
+}
+
+/* tag seletors */
+ol {
+    list-style: none;
+}
+
+/* class selector */
+.sup {
+    color: red;
+}
+
+/* id selector */
+#chrome {
+    color: blue;
+}
+
+/* group selector */
+p,label {
+    font-size: larger;
+}
+
+li,ol{
+    border: 1px solid;
+    padding: 15px;
+    margin: 5px;
+}
+
+/* relationship selector [it only targets direct children]*/
+ul>li {
+    list-style: none;
+}
+
+/* descendnt selector or indirect selector [it targets direct/indirect children also ]*/
+ul li {
+    background-color: pink  ;
+}
+
+/* sibling */
+/* 1. General sibling  [doubt]*/
+h2~p {
+    border: 1px solid;
+}
+
+/* 2. Adjacent sibling [it targets immediate sibling only]*/
+h3+li {
+    background-color: yellowgreen;
+}
+
+
+/* pseudo selectors  */
+/*1. pseudo class selectors */
+li:first-child {
+    background-color: blueviolet;
+}
+
+li:nth-child(3) {
+    background-color:burlywood;  /*we can use last-child, even, odd keywords to TARGET A PARTICULAR ELEMENT*/
+}
+
+li:hover {
+    background-color: lightgray;
+}
+
+
+/* 2. Pseudo element selector */
+li::first-letter {
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+li::after{  /* we can also use before keyword to add text before the list*/
+    content: "- IN";
+}
+
+h3::selection{
+    background-color: yellow    ;
+}
+
+h2::selection{
+    background-color: yellow;
+}
+
+
+
+
